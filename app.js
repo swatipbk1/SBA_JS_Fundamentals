@@ -24,3 +24,10 @@ function populateCurrencies() {
 }
 
 populateCurrencies();
+
+// Convert currency
+async function convertCurrency() {
+  const amount = parseFloat(amountInput.value);
+  const fromCurrency = fromCurrencySelect.value;
+  const toCurrency = toCurrencySelect.value;
+
