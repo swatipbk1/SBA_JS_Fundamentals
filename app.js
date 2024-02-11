@@ -17,3 +17,8 @@ function populateCurrencies() {
     const option1 = document.createElement('option');
     option1.value = currency;
     option1.textContent = currency;
+    const option2 = option1.cloneNode(true);
+    fromCurrencySelect.appendChild(option1);
+    toCurrencySelect.appendChild(option2);
+  });
+}
