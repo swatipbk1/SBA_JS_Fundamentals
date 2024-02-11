@@ -10,3 +10,10 @@ const resultText = document.getElementById('result');
 const searchInput = document.getElementById('searchInput');
 const addCurrencyBtn = document.getElementById('addCurrencyBtn');
 const customCurrencyInput = document.getElementById('customCurrencyInput');
+
+// Populate currency dropdowns
+function populateCurrencies() {
+  currencies.forEach(currency => {
+    const option1 = document.createElement('option');
+    option1.value = currency;
+    option1.textContent = currency;
