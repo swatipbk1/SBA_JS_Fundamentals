@@ -22,3 +22,5 @@ function populateCurrencies() {
     toCurrencySelect.appendChild(option2);
   });
 }
+
+populateCurrencies();
