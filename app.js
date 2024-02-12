@@ -31,3 +31,20 @@ async function convertCurrency() {
   const fromCurrency = fromCurrencySelect.value;
   const toCurrency = toCurrencySelect.value;
 
+  if (!isNaN(amount) && fromCurrency && toCurrency) {
+    const rates = await fetchExchangeRates(fromCurrency);
+    if (rates) {
+      const exchangeRate = rates[toCurrency];
+      if (exchangeRate) {
+        const result = amount * exchangeRate;
+        resultText.textContent = `${amount} ${fromCurrency} = ${result.toFixed(2)} ${toCurrency}`;
+      } else {
+        resultText.textContent = 'Exchange rate not available for selected currency';
+      }
+    } else {
+      resultText.textContent = 'Failed to fetch exchange rates';
+    }
+  } else {
+    resultText.textContent = 'Please enter valid amount and select currencies';
+  }
+}
