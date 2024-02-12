@@ -89,3 +89,10 @@ body {
     background-color: #218838; /* Darker green on hover */
 
   }
+
+  /* Linear gradient background */
+  body {
+    background: linear-gradient(to bottom right, #4e54c8, #8f94fb); /* Gradient from purple to blue */
+    color: #fff; /* White text color on gradient background */
+  }
+  
