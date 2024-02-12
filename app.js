@@ -67,3 +67,20 @@ function searchCurrencies(query) {
     toCurrencySelect.appendChild(option2);
   });
 }
+
+
+// Add currency
+async function addCurrency(currency) {
+  try {
+    const response = await fetch('https://api.example.com/currencies', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        // Add any additional headers if required
+      },
+      body: JSON.stringify({ currency }),
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to add currency');
+    }
