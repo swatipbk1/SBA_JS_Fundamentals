@@ -93,3 +93,26 @@ async function addCurrency(currency) {
     // Display error message to the user
   }
 }
+
+// Event listeners
+convertBtn.addEventListener('click', convertCurrency);
+
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.trim();
+  if (query) {
+    searchCurrencies(query);
+  } else {
+    // If search input is empty, repopulate dropdowns with all currencies
+    populateCurrencies();
+  }
+});
+
+addCurrencyBtn.addEventListener('click', () => {
+  const customCurrency = customCurrencyInput.value.trim().toUpperCase();
+  if (customCurrency && !currencies.includes(customCurrency)) {
+    addCurrency(customCurrency);
+    // Clear the input field
+    customCurrencyInput.value = '';
+  }
+});
+
