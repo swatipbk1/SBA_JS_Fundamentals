@@ -21,3 +21,15 @@ This is a currency converter application that allows users to convert between di
 
 - Enabled users to add custom currencies through a POST request to the API.
 - Implemented in `app.js`.
+
+### 4. Use of Promises and async/await Syntax
+
+- Utilized async/await syntax and Promises for handling asynchronous operations.
+- Implemented in various functions throughout `app.js` and `exchangeRates.js`.
+
+### 5. Organization of JavaScript Code into Modules
+
+- Organized JavaScript code into three different module files: `exchangeRates.js`, `currencies.js`, and `app.js`.
+- Imported functions and data across files as necessary.
+
+
