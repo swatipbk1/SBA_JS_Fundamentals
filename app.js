@@ -48,3 +48,9 @@ async function convertCurrency() {
     resultText.textContent = 'Please enter valid amount and select currencies';
   }
 }
+
+// Search currencies
+function searchCurrencies(query) {
+  const filteredCurrencies = currencies.filter(currency =>
+    currency.toLowerCase().includes(query.toLowerCase())
+  );
