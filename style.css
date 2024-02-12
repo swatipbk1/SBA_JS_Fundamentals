@@ -19,4 +19,7 @@ body {
     color: #333; /* Dark gray heading color */
     margin-bottom: 30px; /* Add spacing below the heading */
   }
-  
+  .converter {
+    display: flex;
+    flex-direction: column;
+  }
