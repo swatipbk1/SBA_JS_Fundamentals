@@ -84,3 +84,12 @@ async function addCurrency(currency) {
     if (!response.ok) {
       throw new Error('Failed to add currency');
     }
+
+    // Handle success
+    console.log('Currency added successfully');
+    // You may want to update the currencies array and repopulate the dropdowns here
+  } catch (error) {
+    console.error('Error adding currency:', error.message);
+    // Display error message to the user
+  }
+}
