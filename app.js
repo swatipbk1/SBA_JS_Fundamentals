@@ -54,3 +54,16 @@ function searchCurrencies(query) {
   const filteredCurrencies = currencies.filter(currency =>
     currency.toLowerCase().includes(query.toLowerCase())
   );
+  // Clear existing options
+  fromCurrencySelect.innerHTML = '';
+  toCurrencySelect.innerHTML = '';
+  // Populate dropdowns with filtered currencies
+  filteredCurrencies.forEach(currency => {
+    const option1 = document.createElement('option');
+    option1.value = currency;
+    option1.textContent = currency;
+    const option2 = option1.cloneNode(true);
+    fromCurrencySelect.appendChild(option1);
+    toCurrencySelect.appendChild(option2);
+  });
+}
