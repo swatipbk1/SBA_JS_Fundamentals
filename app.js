@@ -1,6 +1,6 @@
+
 import { fetchExchangeRates } from './exchangeRates.js';
 import currencies from './currencies.js';
-
 
 const amountInput = document.getElementById('amount');
 const fromCurrencySelect = document.getElementById('fromCurrency');
@@ -68,7 +68,6 @@ function searchCurrencies(query) {
   });
 }
 
-
 // Add currency
 async function addCurrency(currency) {
   try {
@@ -115,4 +114,3 @@ addCurrencyBtn.addEventListener('click', () => {
     customCurrencyInput.value = '';
   }
 });
-
