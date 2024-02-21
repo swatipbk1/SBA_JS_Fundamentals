@@ -71,7 +71,7 @@ function searchCurrencies(query) {
 // Add currency
 async function addCurrency(currency) {
   try {
-    const response = await fetch('https://api.example.com/currencies', {
+    const response = await fetch('https://api.exchangerate-api.com/v4/latest/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
